@@ -1,4 +1,4 @@
-name: Deploy CI
+name: DeployCommit CI
 on:
   push:
     types: [created]
