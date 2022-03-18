@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: yarn
       - name: init lint
-        run:  npx eslint --init
+        run:  npm install eslint-config-eslint --save-dev
       - name: Run lint command
         run: yarn run eslint ./src/
   release:
