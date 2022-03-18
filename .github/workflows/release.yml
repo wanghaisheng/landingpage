@@ -16,11 +16,11 @@ jobs:
         with:
           node-version: 14
       - name: Install dependencies
-        run: npm install
+        run: yarn
       - name: Install lint
-        run: npm install eslint --save-dev    
+        run: yarn add eslint   
       - name: Run lint command
-        run: npm run eslint ./src/
+        run: yarn run eslint ./src/
   release:
     needs: [lint]
     name: Build and release
