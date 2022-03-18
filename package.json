@@ -1,51 +1,53 @@
 {
-	"name": "@betahuhn/cf-worker-starter",
-	"version": "1.0.47",
-	"description": "Starter Template for Cloudflare Workers with GitHub Actions CI and Automatic Releases",
-	"main": "index.js",
-	"scripts": {
-		"lint": "eslint ./src/ --ext .ts",
-		"test:clean": "rimraf ./transpiled/src ./transpiled/test",
-		"test": "npm run test:clean && npm run transpile && mocha --require source-map-support/register --recursive transpiled/test",
-		"transpile": "tsc --project ./test",
-		"dev": "wrangler dev",
-		"build": "webpack"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/betahuhn/workers-template.git"
-	},
-	"keywords": [
-		"template",
-		"workers",
-		"cloudflare-workers",
-		"typescript",
-		"nodejs"
-	],
-	"author": "Maximilian Schiller <schiller@mxis.ch>",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/betahuhn/workers-template/issues"
-	},
-	"homepage": "https://github.com/betahuhn/workers-template#readme",
-	"devDependencies": {
-		"@cloudflare/workers-types": "^2.2.2",
-		"@cloudflare/wrangler": "^1.19.8",
-		"@types/chai": "^4.3.0",
-		"@types/mocha": "^8.2.3",
-		"chai": "^4.3.6",
-		"mocha": "^8.4.0",
-		"rimraf": "^3.0.2",
-		"service-worker-mock": "^2.0.5",
-		"ts-loader": "^8.3.0",
-		"typescript": "^4.6.2",
-		"webpack": "^5.70.0",
-		"webpack-cli": "^4.9.2"
-	},
-	"dependencies": {
-		"@betahuhn/config": "^1.2.0",
-		"@typescript-eslint/eslint-plugin": "^4.33.0",
-		"@typescript-eslint/parser": "^4.33.0",
-		"eslint": "^7.32.0"
-	}
+  "name": "oliancho-lp",
+  "description": "oliancho-lp",
+  "version": "0.0.1",
+  "license": "MIT",
+  "browserslist": "defaults, not ie<=11",
+  "scripts": {
+    "dev": "sapper dev",
+    "build": "sapper build --legacy",
+    "export": "sapper export --legacy",
+    "ex:firebase": "sapper export --legacy && rm -rf firebase/public && cp -r __sapper__/export firebase/public",
+    "start": "node __sapper__/build",
+    "test:ui": "tape test/ui/**/*.test.js | tap-nirvana",
+    "test:ui:debug": "DEBUG=true tape test/ui/**/*.test.js debug | tap-nirvana",
+    "test:unit": "rollup -c rollup.test.config.js && node test/unit/bundle-test.js | tap-nirvana"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "polka": "0.5.2",
+    "sirv": "^0.4.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/runtime": "^7.9.2",
+    "@rollup/plugin-multi-entry": "^3.0.0",
+    "@rollup/plugin-replace": "^2.3.1",
+    "autoprefixer": "^9.7.5",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-svelte3": "^2.7.3",
+    "faker": "^4.1.0",
+    "puppeteer-core": "^2.1.1",
+    "riteway": "^6.1.1",
+    "rollup": "^2.2.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-svelte": "^5.1.1",
+    "rollup-plugin-terser": "^5.3.0",
+    "sapper": "^0.27.11",
+    "svelte": "^3.20.1",
+    "svelte-i-pack": "^0.2.8",
+    "svelte-preprocess": "^3.5.0",
+    "tap-nirvana": "^1.1.0",
+    "tape": "^4.13.2",
+    "tape-promise": "^4.0.0"
+  }
 }

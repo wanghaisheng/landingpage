@@ -1,4 +1,11 @@
-dist
-node_modules
-transpiled
-worker
+/node_modules/
+/src/node_modules/@sapper/
+yarn-error.log
+/cypress/screenshots/
+/__sapper__/
+archive
+firebase
+.*
+/test/
+rollup.test.config.js
+static/ipack

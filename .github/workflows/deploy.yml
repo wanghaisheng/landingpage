@@ -32,6 +32,6 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4.13.1
         with:
           commit_message: ":rocket: Deploy new version [skip ci]"
-          commit_user_name: BetaHuhn Bot
-          commit_user_email: bot@mxis.ch
-          commit_author: BetaHuhn Bot <bot@mxis.ch>
+          commit_user_name: haisheng Bot
+          commit_user_email: edwin.uestc@gmail.com
+          commit_author: haisheng Bot <edwin.uestc@gmail.com>
