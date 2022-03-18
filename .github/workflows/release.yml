@@ -17,8 +17,6 @@ jobs:
           node-version: 14
       - name: Install dependencies
         run: yarn
-      - name: Install lint
-        run: yarn add eslint
       - name: init lint
         run:  npm init @eslint/config
       - name: Run lint command
