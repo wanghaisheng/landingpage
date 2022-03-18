@@ -17,6 +17,8 @@ jobs:
           node-version: 14
       - name: Install dependencies
         run: npm install
+      - name: Install lint
+        run: npm install  lint      
       - name: Run lint command
         run: npm run lint
   release:
@@ -32,7 +34,7 @@ jobs:
         with:
           node-version: 14
       - name: Install dependencies
-        run: npm install
+        run: npm install        
       - name: Run build command
         run: npm run build
       - name: Run Semantic Release
